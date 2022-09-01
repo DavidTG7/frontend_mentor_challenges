@@ -5,8 +5,8 @@ export const ExpensesMain = styled.main`
   display: grid;
   place-items: center;
   padding: 10rem 0;
-  @media screen and(max-width: 1000px){
-    background: red;
+  @media screen and (min-width: 1000px) {
+    padding: 2rem 0;
   }
 `;
 
@@ -97,11 +97,11 @@ export const Column = styled.div`
       color === "r" ? "hsl(10, 79%, 80%)" : "hsl(186, 34%, 75%)"};
     &::before {
       position: absolute;
-      content: '${({value}) => `$${value}`}';
+      content: "${({ value }) => `$${value}`}";
       border-radius: 4px;
       color: hsl(33, 100%, 98%);
       background: hsl(25, 47%, 15%);
-      padding: .5rem;
+      padding: 0.5rem;
       width: 3.5rem;
       font-weight: 600;
       font-size: 1.2rem;
@@ -109,7 +109,6 @@ export const Column = styled.div`
       margin: -3rem auto;
       align-items: center;
       justify-content: center;
-      /* margin-top: -20px; */
     }
   }
 `;
