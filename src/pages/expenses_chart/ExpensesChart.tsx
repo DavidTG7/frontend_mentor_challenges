@@ -1,4 +1,4 @@
-import { CardBox, CirclesBox, Column, ColumnsBox, Day, DayBox, ExpensesMain, HeaderBox, HeaderPrice, HeaderTitle, LeftCircle, RightCircle, TextBox } from "./ExpensesChart.styles";
+import { BottomBar, CardBox, CardTitle, CirclesBox, Column, ColumnsBox, Day, DayBox, ExpensesMain, HeaderBox, HeaderPrice, HeaderTitle, LastInfoBox, LeftCircle, Percentage, PercentageBox, PercentageText, RightCircle, TextBox, TotalBox, TotalText, TotalValue } from "./ExpensesChart.styles";
 import data from './data.json'
 
 export const ExpensesChart = () => {
@@ -28,9 +28,21 @@ export const ExpensesChart = () => {
         </CirclesBox>
       </HeaderBox>
       <CardBox>
+        <CardTitle>Spending - Last 7 days</CardTitle>
         <ColumnsBox>
           {allColumns}
         </ColumnsBox>
+        <BottomBar />
+        <LastInfoBox>
+          <TotalBox>
+            <TotalText>Total this month</TotalText>
+            <TotalValue>$478.33</TotalValue>
+          </TotalBox>
+          <PercentageBox>
+            <Percentage>+2.4%</Percentage>
+            <PercentageText>from last month</PercentageText>
+          </PercentageBox>
+        </LastInfoBox>
       </CardBox>
     </ExpensesMain>
   );

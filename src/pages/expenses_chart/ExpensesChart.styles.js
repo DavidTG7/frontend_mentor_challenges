@@ -4,7 +4,10 @@ export const ExpensesMain = styled.main`
   background: hsl(27, 66%, 92%);
   display: grid;
   place-items: center;
-  padding: 2rem 0;
+  padding: 10rem 0;
+  @media screen and(max-width: 1000px){
+    background: red;
+  }
 `;
 
 export const HeaderBox = styled.div`
@@ -13,7 +16,7 @@ export const HeaderBox = styled.div`
   background: hsl(10, 79%, 65%);
   border-radius: 10px;
   padding: 2rem;
-  width: 330px;
+  width: 33rem;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -61,13 +64,19 @@ export const CardBox = styled.div`
   box-sizing: border-box;
   color: hsl(25, 47%, 15%);
   padding: 1rem;
-  width: 330px;
-  margin: 1rem;
+  width: 33rem;
+  margin: 1.5rem;
   border-radius: 10px;
   background: hsl(33, 100%, 98%);
 `;
 
+export const CardTitle = styled.h3`
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 1.5rem 1rem 5rem;
+`;
 export const ColumnsBox = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -75,11 +84,34 @@ export const ColumnsBox = styled.div`
 `;
 
 export const Column = styled.div`
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
   width: 3.4rem;
   border-radius: 4px;
-  height: ${({ value }) => `calc(${value} * 3px)`};
+  height: ${({ value }) => `calc(${value} * 3.2px)`};
   background: ${({ color }) =>
     color === "r" ? "hsl(10, 79%, 65%)" : "hsl(186, 34%, 60%)"};
+  &:hover {
+    background: ${({ color }) =>
+      color === "r" ? "hsl(10, 79%, 80%)" : "hsl(186, 34%, 75%)"};
+    &::before {
+      position: absolute;
+      content: '${({value}) => `$${value}`}';
+      border-radius: 4px;
+      color: hsl(33, 100%, 98%);
+      background: hsl(25, 47%, 15%);
+      padding: .5rem;
+      width: 3.5rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      display: flex;
+      margin: -3rem auto;
+      align-items: center;
+      justify-content: center;
+      /* margin-top: -20px; */
+    }
+  }
 `;
 
 export const DayBox = styled.div`
@@ -88,4 +120,52 @@ export const DayBox = styled.div`
   flex-flow: column;
   align-items: center;
 `;
-export const Day = styled.p``;
+export const Day = styled.p`
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+  color: hsl(28, 10%, 53%);
+`;
+
+export const BottomBar = styled.div`
+  width: 95%;
+  margin: 2rem auto;
+  border-bottom: solid 0.2rem hsl(27, 66%, 92%);
+`;
+
+export const LastInfoBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const TotalBox = styled.div`
+  margin: 0.5rem 1rem 1.5rem;
+`;
+
+export const TotalText = styled.p`
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: hsl(28, 10%, 53%);
+`;
+
+export const TotalValue = styled.p`
+  font-size: 2.5rem;
+  font-weight: 600;
+`;
+
+export const PercentageBox = styled.div`
+  margin: 0.5rem 1rem 1.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  align-items: flex-end;
+`;
+
+export const Percentage = styled.p`
+  font-size: 1.2rem;
+  font-weight: 600;
+`;
+
+export const PercentageText = styled.p`
+  font-size: 1.2rem;
+  color: hsl(28, 10%, 53%);
+`;
