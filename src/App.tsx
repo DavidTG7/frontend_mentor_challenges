@@ -9,8 +9,8 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='expenses-chart' element={<ExpensesChart />} />
+        <Route path='/frontend_mentor_challenges' element={<Main />} />
+        <Route path='/frontend_mentor_challenges/expenses-chart' element={<ExpensesChart />} />
       </Routes>
       <Footer />
     </>

@@ -50,9 +50,12 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - JavaScript
+- TypeScript
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
+- [Styled Components](https://styled-components.com/)
+- [React Router](https://reactrouter.com/en/main)
+- For styles
 
 ### What I learned
 

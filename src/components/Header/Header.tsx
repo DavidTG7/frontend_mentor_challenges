@@ -5,7 +5,7 @@ export const Header = () => {
   return(
     <MainHeader>
       <HeaderTitle>FRONTEND MENTOR CHALLENGES</HeaderTitle>
-      <Link to='/'>
+      <Link to='/frontend_mentor_challenges'>
         Home
       </Link>
     </MainHeader>
