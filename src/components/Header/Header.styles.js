@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MainHeader = styled.main`
+export const MainHeader = styled.header`
   width: 100%;
   height: 6rem;
   background: lightgrey;

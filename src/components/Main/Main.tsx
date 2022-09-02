@@ -4,7 +4,7 @@ import { MainBox } from "../Main.styles";
 export const Main = () => {
   return(
     <MainBox>
-      <Link to='expenses-chart'>
+      <Link to='/expenses-chart'>
         Expenses Chart
       </Link>
       
