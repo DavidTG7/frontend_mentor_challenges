@@ -7,6 +7,10 @@ export const Main = () => {
       <Link to='/expenses-chart'>
         Expenses Chart
       </Link>
+      <br />
+      <Link to='/interactive-card'>
+        Interactive Card
+      </Link>
       
     </MainBox>
   );
