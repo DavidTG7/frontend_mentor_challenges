@@ -26,11 +26,11 @@ import data from './data.json'
 export const ExpensesChart = () => {
   const allData = Object.values(data);
 
-  const allColumns = allData.map(item => {
+  const allColumns = allData.map((item, i) => {
     const color = item.day === 'wed' ? '' : 'r';
 
     return (
-      <DayBox>
+      <DayBox key={`dayBox-${i}`}>
         <Column color={color} value={item.amount} />
         <Day>{item.day}</Day>
       </DayBox>
